@@ -345,12 +345,18 @@ footer img {
 footer img:hover {
   opacity: 0.5;
 }
-footer i {
+footer .fa-facebook,
+footer .fa-youtube,
+footer .fa-twitter,
+footer .fa-linkedin {
   color: white;
   font-size: 30px;
   padding-right: 15px;
 }
-footer i:hover {
+footer .fa-facebook:hover,
+footer .fa-youtube:hover,
+footer .fa-twitter:hover,
+footer .fa-linkedin:hover {
   color: coral;
   transform: scale(1.2);
 }
@@ -494,6 +500,163 @@ footer .elements_wrapper #bottom_footer p {
   footer .elements_wrapper #top_footer nav a {
     margin-right: 25px;
     font-size: 15px;
+  }
+}
+@media screen and (max-width: 450px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  }
+  header img {
+    width: 300px;
+  }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  header .burger_wrapper {
+    position: static;
+    top: auto;
+    left: auto;
+  }
+  #learn_more {
+    margin-top: 2em;
+  }
+  #learn_more .learn_card .learn_elements {
+    width: 100%;
+  }
+  #learn_more .learn_card .img_wrapper {
+    display: none;
+  }
+  #services {
+    height: 110vh;
+  }
+  #services .services_title {
+    align-self: center;
+    padding-left: 0%;
+  }
+  #services .services_cards_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #services .services_cards_container .service_building {
+    margin-bottom: -15px;
+  }
+  #features {
+    height: 110vh;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #features .features_title {
+    align-self: center;
+    padding-right: 0%;
+    margin-bottom: 2em;
+  }
+  #features .features_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  #features .features_container .features_cards {
+    width: 55%;
+    text-align: center;
+  }
+  #features .features_container .features_cards p {
+    width: 100%;
+  }
+  #features .touch {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+  #features .touch .touch_elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-left: 0%;
+    text-align: center;
+  }
+  #features .touch .touch_elements p {
+    width: 80%;
+  }
+  #features .touch .btn_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+  }
+  footer img {
+    width: 100%;
+    padding-bottom: 1em;
+  }
+  footer .elements_wrapper {
+    padding-top: 20vh;
+  }
+  footer .elements_wrapper ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .elements_wrapper #top_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0%;
+    margin-bottom: 4em;
+  }
+  footer .elements_wrapper #top_footer .img_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .elements_wrapper #top_footer nav a {
+    font-size: 25px;
+    margin-top: 5px;
+    margin-right: 0px;
+  }
+  footer .elements_wrapper #bottom_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4em;
+    gap: 2em;
+  }
+  footer .elements_wrapper #bottom_footer .socials_container ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 

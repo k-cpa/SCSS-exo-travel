@@ -18,7 +18,10 @@ footer {
     }
 
     // taille et couleurs des favicons
-    i {
+    .fa-facebook, 
+    .fa-youtube,
+    .fa-twitter,
+    .fa-linkedin {
         color: var.$colorTextInside;
         font-size: 30px;
         padding-right: 15px;

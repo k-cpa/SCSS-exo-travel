@@ -1,0 +1,170 @@
+@use "../abstract/variable.scss" as var;
+@use "../abstract/mixin.scss";
+
+@media screen and (max-width: 450px) {
+
+
+        /////////////////////////// HEADER
+
+        header {
+            @include mixin.flex (column);
+            height: 10vh;
+
+            img {
+                width: 300px;
+            }
+
+            nav {
+                @include mixin.flex ($justify: center);
+            }
+
+            .burger_wrapper {
+                position: static;
+                top: auto;
+                left: auto;
+            }
+        }
+
+        /////////////////////////// LEARN
+        
+    #learn_more {
+        margin-top: 2em;
+        .learn_card {
+            .learn_elements {
+                width: 100%;
+            }
+
+            .img_wrapper {
+                display: none;
+            }
+        }
+    }
+
+        /////////////////////////// SERVICES
+
+    #services {
+        height: 110vh;
+
+        .services_title {
+            align-self: center;
+            padding-left: 0%;
+        }
+
+        .services_cards_container {
+            @include mixin.flex (column);
+
+            .service_building {
+                // POURQUOI UN DECALAGE AVEC CELUI DU BAS ? 
+                margin-bottom: -15px;
+            }
+        }
+    }
+
+    /////////////////////////// FEATURES
+        
+    #features {
+        height: 110vh;
+        margin-top: 2em;
+        @include mixin.flex (column, flex-start, flex-start);
+
+        .features_title {
+            align-self: center;
+            padding-right: 0%;
+            margin-bottom: 2em;
+        }
+
+        .features_container {
+            @include mixin.flex (column);
+            width: 100%;
+
+            .features_cards {
+                width: 55%;
+                text-align: center;
+
+                p {
+                    width: 100%;
+                }
+            }
+        }
+
+        .touch {
+            width: 100%;
+            height: 40vh;
+            @include mixin.flex (column);
+            gap: 2em;
+
+            .touch_elements {
+                @include mixin.flex (column, center, center);
+                width: 100%;
+                padding-left: 0%;
+                text-align: center;
+
+                p {
+                    width: 80%;
+                }
+        
+            }
+
+            .btn_wrapper {
+                width: 100%;
+                @include mixin.flex;
+            }
+        }
+
+       
+    }
+    
+    /////////////////////////// FEATURES
+    
+    footer {
+        @include mixin.flex(column);
+        height: 75vh;
+
+        img {
+            width: 100%;
+            padding-bottom: 1em;
+        }
+
+        .elements_wrapper {
+            padding-top: 20vh;
+
+            ul {
+                @include mixin.flex (column);
+            }
+
+            #top_footer {
+                @include mixin.flex (column);
+                margin-top: 0%;
+                margin-bottom: 4em;
+
+                .img_wrapper {
+                    width: 100%;
+                    @include mixin.flex;
+                }
+
+                nav {
+
+                    a {
+                        font-size: 25px;
+                        margin-top: 5px;
+                        margin-right: 0px;
+                    }
+                }
+                
+            }
+
+            #bottom_footer {
+                @include mixin.flex (column);
+                padding-top: 4em;
+                gap: 2em;
+
+                .socials_container {
+                    ul {
+                        @include mixin.flex;
+                    }
+                }
+            }
+
+        }
+    }
+}
