@@ -32,24 +32,24 @@ body h3 {
   font-weight: 100;
 }
 body span {
-  display: inline-block;
+  display: block;
 }
 body .btn {
   background-color: white;
   color: black;
-  padding: 10px 20px;
+  padding: 15px 20px;
   border-radius: 5px;
   border: 1px solid black;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
 }
-body i {
-  color: coral;
-  font-size: 60px;
+body .btn:hover {
+  transform: scale(1.1);
 }
 
 section {
   width: 100%;
-  height: 45vh;
+  height: 50vh;
 }
 
 header {
@@ -219,10 +219,27 @@ header nav ul a:hover {
 }
 
 #features {
-  margin-top: 4%;
+  width: 100%;
+  height: 60vh;
+  padding-bottom: 4%;
   background-image: url(../img/wave.svg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#features .features_title {
+  align-self: flex-end;
+  padding-right: 7.5%;
+  margin-bottom: 4em;
+}
+#features i {
+  color: coral;
+  font-size: 60px;
 }
 #features .features_container {
   width: 85%;
@@ -230,6 +247,135 @@ header nav ul a:hover {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+#features .features_container .features_cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 50%;
+  gap: 1em;
+}
+#features .features_container .features_cards p {
+  font-size: 1.2em;
+  color: grey;
+  line-height: 25px;
+  text-align: center;
+  width: 80%;
+}
+#features .touch {
+  position: absolute;
+  top: 80%;
+  width: 85%;
+  height: 25vh;
+  background-color: coral;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#features .touch .touch_elements {
+  width: 80%;
+  padding-left: 3%;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#features .touch .touch_elements h2 {
+  font-size: 3.5em;
+  color: white;
+  font-weight: 100;
+}
+#features .touch .touch_elements p {
+  width: 60%;
+}
+#features .touch .btn_wrapper {
+  width: 25%;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  background-color: rgb(18, 7, 7);
+  color: white;
+}
+footer img {
+  width: 30%;
+  transition: 0.3s ease;
+}
+footer img:hover {
+  opacity: 0.5;
+}
+footer i {
+  color: white;
+  font-size: 30px;
+  padding-right: 15px;
+}
+footer i:hover {
+  color: coral;
+  transform: scale(1.2);
+}
+footer .elements_wrapper {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .elements_wrapper ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+footer .elements_wrapper #top_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5em;
+  margin-bottom: 2em;
+}
+footer .elements_wrapper #top_footer .img-wrapper {
+  width: 10%;
+}
+footer .elements_wrapper #top_footer nav {
+  width: 90%;
+}
+footer .elements_wrapper #top_footer nav a {
+  display: inline-block;
+  color: rgb(188, 188, 188);
+  font-size: 20px;
+  margin-right: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+footer .elements_wrapper #top_footer nav a:hover {
+  color: coral;
+  transform: scale(1.1);
+}
+footer .elements_wrapper #bottom_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid grey;
+  padding-top: 2em;
+  width: 100%;
+  line-height: 1.2em;
+}
+footer .elements_wrapper #bottom_footer p {
+  color: rgb(188, 188, 188);
+  padding-top: 1%;
 }
 
 /*# sourceMappingURL=style.css.map */

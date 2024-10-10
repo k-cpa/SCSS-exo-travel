@@ -1,0 +1,89 @@
+@use "../abstract/variable.scss" as var;
+@use "../abstract/mixin.scss";
+
+footer {
+    @include mixin.flex;
+    height: 40vh;
+    background-color: rgb(18, 7, 7);
+    color: var.$colorTextInside;
+
+    // taille de l'image
+    img {
+        width: 30%;
+        transition: .3s ease;
+
+        &:hover {
+            opacity: .5;
+        }
+    }
+
+    // taille et couleurs des favicons
+    i {
+        color: var.$colorTextInside;
+        font-size: 30px;
+        padding-right: 15px;
+
+        &:hover {
+            color: coral;
+            transform: scale(1.2);
+        }
+    }
+
+
+    .elements_wrapper {
+        width: 85%;
+        height: 100%;
+        @include mixin.flex (column);
+
+        ul {
+            @include mixin.flex($justify: flex-end);
+        }
+
+        // GESTION PREMIER LIGNE FOOTER
+        #top_footer {
+            @include mixin.flex($justify:space-between);
+            margin-top: 5em;
+            margin-bottom: 2em;
+
+            .img-wrapper {
+                width: 10%;
+            }
+
+            nav {
+                width: 90%;
+
+                a {
+                    display: inline-block;
+                    color: rgb(188, 188, 188);
+                    font-size: 20px;
+                    margin-right: 50px;
+                    cursor: pointer;
+                    transition: .3s ease;
+    
+                    &:hover {
+                        color: coral;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        // GESTION DEUXIEME LIGNE FOOTER
+        #bottom_footer {
+            @include mixin.flex ($justify: space-between);
+            border-top: 1px solid grey;
+            padding-top: 2em;
+            width: 100%;
+            line-height: 1.2em;
+
+            p {
+                color: rgb(188, 188, 188);
+                padding-top: 1%;
+            }
+        }
+
+    }
+ 
+    
+}
+
