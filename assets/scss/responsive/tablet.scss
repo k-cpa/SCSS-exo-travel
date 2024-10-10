@@ -1,0 +1,44 @@
+@use "../abstract/mixin.scss";
+@use "../abstract/variable.scss" as var;
+@use "../abstract/keyframes.scss";
+
+
+@media screen and (max-width: 800px) {
+
+    /////////////////////////// HEADER
+
+    header nav {
+        position: relative;
+
+        ul {
+            display: none;
+        }
+    }
+
+    .burger_wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-right: 5%;
+
+        i {
+            display: revert;
+
+            &:hover {
+                opacity: .4;
+            }
+        }
+    }
+
+    .burger_wrapper:hover ul {
+        display: revert;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        background-color: rgb(255, 127, 80, 0.5);
+        padding: 1rem;
+        margin: .3rem;
+        border-radius: 20px;
+    }
+    
+}

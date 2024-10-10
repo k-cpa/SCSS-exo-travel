@@ -28,7 +28,7 @@
 
             p {
                 @include mixin.p;
-                width: 90%
+                width: 90%;
             }
 
         }
@@ -46,7 +46,7 @@
                 top: 10%;
                 left: 35%;
                 width: 300px;
-                animation: phoneFadeIn 1.3s ease-in-out;
+                animation: phoneFadeIn 1s ease-in-out;
             }
         }
     }
