@@ -101,7 +101,7 @@ header .burger_wrapper {
   justify-content: center;
   align-items: flex-start;
 }
-header .burger_wrapper i {
+header .burger_wrapper .fa-bars {
   display: none;
   color: black;
   border: 1px solid grey;
@@ -115,6 +115,14 @@ header .burger_wrapper i {
   }
   100% {
     transform: translateY(0%);
+  }
+}
+@keyframes phoneFadeInTablet {
+  0% {
+    transform: translateX(130%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
 #learn_more {
@@ -402,25 +410,28 @@ footer .elements_wrapper #bottom_footer p {
 }
 
 @media screen and (max-width: 800px) {
+  body .btn {
+    padding: 10px 20px;
+  }
   header nav {
     position: relative;
   }
   header nav ul {
     display: none;
   }
-  .burger_wrapper {
+  header .burger_wrapper {
     position: absolute;
     top: 0;
     right: 0;
     padding-right: 5%;
   }
-  .burger_wrapper i {
+  header .burger_wrapper .fa-bars {
     display: revert;
   }
-  .burger_wrapper i:hover {
+  header .burger_wrapper .fa-bars:hover {
     opacity: 0.4;
   }
-  .burger_wrapper:hover ul {
+  header .burger_wrapper:hover ul {
     display: revert;
     flex-direction: column;
     align-items: center;
@@ -429,6 +440,60 @@ footer .elements_wrapper #bottom_footer p {
     padding: 1rem;
     margin: 0.3rem;
     border-radius: 20px;
+  }
+  #learn_more .learn_card .learn_elements {
+    width: 55%;
+    padding-left: 5%;
+  }
+  #learn_more .learn_card .learn_elements h2 {
+    font-size: 3em;
+  }
+  #learn_more .learn_card .learn_elements p {
+    font-size: 1em;
+  }
+  #learn_more .learn_card .img_wrapper {
+    width: 45%;
+  }
+  #learn_more .learn_card .img_wrapper img {
+    position: static;
+    left: auto;
+    top: auto;
+    width: 200px;
+    animation: phoneFadeInTablet 1s ease-in-out;
+  }
+  #features {
+    height: 70vh;
+  }
+  #features .features_container .features_cards {
+    margin-bottom: 10%;
+  }
+  #features .features_container .features_cards p {
+    width: 100%;
+    font-size: 1em;
+  }
+  #features .touch .touch_elements {
+    width: 55%;
+  }
+  #features .touch .touch_elements h2 {
+    font-size: 2.3em;
+    width: 70%;
+  }
+  #features .touch .touch_elements p {
+    width: 100%;
+  }
+  #features .touch .btn_wrapper {
+    width: 30%;
+  }
+  footer img {
+    width: 70%;
+  }
+  footer i {
+    font-size: 20px;
+    padding-right: 10px;
+  }
+  footer .elements_wrapper #top_footer nav a {
+    margin-right: 25px;
+    font-size: 15px;
   }
 }
 

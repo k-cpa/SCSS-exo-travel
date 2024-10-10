@@ -45,7 +45,7 @@ header {
     .burger_wrapper  {
         @include mixin.flex($align: flex-start);
 
-        i {
+        .fa-bars {
             display: none;
             color: black;
             border: 1px solid grey;

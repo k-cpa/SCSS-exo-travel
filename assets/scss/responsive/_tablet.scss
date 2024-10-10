@@ -7,6 +7,16 @@
 
     /////////////////////////// HEADER
 
+    body {
+
+        .btn {
+            padding: 10px 20px;
+        }
+    }
+
+
+    /////////////////////////// HEADER
+
     header nav {
         position: relative;
 
@@ -15,30 +25,131 @@
         }
     }
 
-    .burger_wrapper {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding-right: 5%;
+    header {
+        .burger_wrapper {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding-right: 5%;
 
-        i {
+            .fa-bars {
+                display: revert;
+
+                &:hover {
+                    opacity: .4;
+                }
+            }
+        }
+
+        .burger_wrapper:hover ul {
             display: revert;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            background-color: rgb(255, 127, 80, 0.5);
+            padding: 1rem;
+            margin: .3rem;
+            border-radius: 20px;
+        }
+    }
 
-            &:hover {
-                opacity: .4;
+    /////////////////////////// LEARN
+
+    #learn_more {
+
+        .learn_card {
+
+            .learn_elements {
+                width: 55%;
+                padding-left: 5%;
+                // gap: 2em;
+
+                h2 {
+                    font-size: 3em;
+                }
+
+                p {
+                    font-size: 1em;
+                }
+            }
+
+            .img_wrapper {
+                width: 45%;
+
+                img {
+                    position: static;
+                    left: auto;
+                    top: auto;
+                    width: 200px;
+                    animation: phoneFadeInTablet 1s ease-in-out;
+                }
             }
         }
     }
 
-    .burger_wrapper:hover ul {
-        display: revert;
-        flex-direction: column;
-        align-items: center;
-        cursor: pointer;
-        background-color: rgb(255, 127, 80, 0.5);
-        padding: 1rem;
-        margin: .3rem;
-        border-radius: 20px;
+    /////////////////////////// FEATURES
+    
+    #features {
+        height: 70vh;
+        .features_container {
+
+            .features_cards {
+                margin-bottom: 10%;
+
+
+                p {
+                    width: 100%;
+                    font-size: 1em;
+                }
+            }
+        }
     }
     
+    #features {
+
+        .touch {
+
+            .touch_elements {
+                width: 55%;
+                h2 {
+                    font-size: 2.3em;
+                    width: 70%;
+                }
+
+                p {
+                    width: 100%;
+                }
+            }
+
+            .btn_wrapper {
+                width: 30%;
+            }
+        }
+    }
+
+    footer {
+        img {
+            width: 70%;
+        }
+
+        i {
+            font-size: 20px;
+            padding-right: 10px;
+        }
+
+        .elements_wrapper {
+
+            #top_footer {
+
+                nav {
+
+                    a {
+                        margin-right: 25px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+        
 }
