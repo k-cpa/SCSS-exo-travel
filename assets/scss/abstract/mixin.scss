@@ -1,0 +1,25 @@
+@mixin flex ($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+@mixin h2 ($color : black, $weight: 550) {
+    font-size: 3.5em;
+    color: $color;
+    font-weight: $weight;
+}
+
+@mixin p ($color: white, $align: left) {
+    font-size: 1.2em;
+    color: $color;
+    line-height: 25px;
+    text-align: $align;
+}
+
+@mixin bg_image ($size: cover, $position: center) {
+    background-size: $size;
+    background-position: $position;
+}

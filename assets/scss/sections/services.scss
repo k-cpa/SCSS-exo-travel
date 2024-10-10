@@ -1,0 +1,77 @@
+@use "../abstract/mixin.scss";
+@use "../abstract/variable.scss" as var;
+
+#services {
+    margin-top: 4%;
+    @include mixin.flex (column, flex-start, center);
+
+    .services_title {
+        align-self: flex-start;
+        padding-left: 7.5%;
+    }
+
+    .services_cards_container {
+        width: 85%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "building passport"
+            "building balloon";
+        gap: 1em;
+        // interne card général
+        .service_cards {
+            @include mixin.flex (column);
+            @include mixin.bg-image;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            box-shadow: var.$shadowDefault;
+            border-radius: var.$radiusDefault;
+            transition: .3s ease;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: var.$radiusDefault;
+                z-index: 1;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                z-index: 2;
+            }
+
+            h3, a {
+                z-index: 2;
+                color: white;
+            }
+
+        }
+
+        // placement sur grid + bg image indiv
+        .service_building {
+            grid-area: building;
+            background-image: url(../img/homme-assis-batiment.jpg);
+
+            
+        }
+
+        .service_passport {
+            grid-area: passport;
+            background-image: url(../img/passport.jpg);
+            
+        }
+
+        .service_balloon {
+            grid-area: balloon;
+            background-image: url(../img/montgolfiere.jpg);
+        }
+    }
+}

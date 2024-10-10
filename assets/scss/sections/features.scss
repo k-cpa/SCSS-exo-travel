@@ -1,0 +1,15 @@
+@use "../abstract/variable.scss" as var;
+@use "../abstract/mixin.scss";
+
+#features {
+    margin-top: 4%;
+    background-image: url(../img/wave.svg);
+    @include mixin.bg-image;
+
+    .features_container {
+        width: 85%;
+        @include mixin.flex ($justify: space-around);
+    }
+
+}
+

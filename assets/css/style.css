@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: lato, sans-serif;
+  src: url(../../font/Lato/Lato-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: lato, sans-serif;
+  src: url(../../font/Lato/Lato-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  font-family: lato;
+  font-weight: 400;
+}
+body h2 {
+  font-size: 3.5em;
+  color: black;
+  font-weight: 550;
+}
+body h3 {
+  font-size: 2em;
+  font-weight: 100;
+}
+body span {
+  display: inline-block;
+}
+body .btn {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+body i {
+  color: coral;
+  font-size: 60px;
+}
+
+section {
+  width: 100%;
+  height: 45vh;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 8vh;
+  margin-bottom: 3%;
+}
+header img {
+  width: 20%;
+  transition: 0.3s ease;
+}
+header img:hover {
+  opacity: 0.5;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header nav ul a {
+  display: inline-block;
+  color: grey;
+  font-size: 20px;
+  margin-right: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+header nav ul a:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+#learn_more {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#learn_more .learn_card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  height: 100%;
+  background-color: coral;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+#learn_more .learn_card .learn_elements {
+  width: 60%;
+  padding-left: 5%;
+  gap: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#learn_more .learn_card .learn_elements h2 {
+  font-size: 3.5em;
+  color: white;
+  font-weight: 550;
+}
+#learn_more .learn_card .learn_elements p {
+  font-size: 1.2em;
+  color: white;
+  line-height: 25px;
+  text-align: left;
+  width: 90%;
+}
+#learn_more .learn_card .img_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 60%;
+  object-fit: cover;
+  position: relative;
+}
+#learn_more .learn_card .img_wrapper img {
+  position: absolute;
+  top: 10%;
+  left: 35%;
+  width: 40%;
+}
+
+#services {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#services .services_title {
+  align-self: flex-start;
+  padding-left: 7.5%;
+}
+#services .services_cards_container {
+  width: 85%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "building passport" "building balloon";
+  gap: 1em;
+}
+#services .services_cards_container .service_cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+#services .services_cards_container .service_cards::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  z-index: 1;
+}
+#services .services_cards_container .service_cards:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
+#services .services_cards_container .service_cards h3, #services .services_cards_container .service_cards a {
+  z-index: 2;
+  color: white;
+}
+#services .services_cards_container .service_building {
+  grid-area: building;
+  background-image: url(../img/homme-assis-batiment.jpg);
+}
+#services .services_cards_container .service_passport {
+  grid-area: passport;
+  background-image: url(../img/passport.jpg);
+}
+#services .services_cards_container .service_balloon {
+  grid-area: balloon;
+  background-image: url(../img/montgolfiere.jpg);
+}
+
+#features {
+  margin-top: 4%;
+  background-image: url(../img/wave.svg);
+  background-size: cover;
+  background-position: center;
+}
+#features .features_container {
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */

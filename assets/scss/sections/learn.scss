@@ -1,0 +1,54 @@
+@use "../abstract/mixin.scss";
+@use "../abstract/variable.scss" as var;
+
+#learn_more {
+    @include mixin.flex;
+
+
+    .learn_card {
+        @include mixin.flex;
+        width: 85%;
+        height: 100%;
+        background-color: var.$primaryColor;
+        overflow: hidden;
+        border-radius: var.$radiusDefault;
+        box-shadow: var.$shadowDefault;
+
+        // Gestion partie texte
+        .learn_elements {
+            width: 60%;
+            padding-left: 5%;
+            gap: 3em;
+            @include mixin.flex (column, space-between, flex-start);
+
+            h2 {
+                @include mixin.h2 (white)
+            }
+
+            p {
+                @include mixin.p;
+                width: 90%
+            }
+
+        }
+
+        // Gestion partie image
+        .img_wrapper {
+            @include mixin.flex;
+            width: 40%;
+            height: 60%;
+            object-fit: cover;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 10%;
+                left: 35%;
+                width: 40%;
+            }
+        }
+    }
+}
+
+
+
