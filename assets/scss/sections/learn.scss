@@ -1,5 +1,6 @@
 @use "../abstract/mixin.scss";
 @use "../abstract/variable.scss" as var;
+@use "../abstract/keyframes.scss";
 
 #learn_more {
     @include mixin.flex;
@@ -22,7 +23,7 @@
             @include mixin.flex (column, space-between, flex-start);
 
             h2 {
-                @include mixin.h2 (white)
+                @include mixin.h2 (white);
             }
 
             p {
@@ -44,11 +45,10 @@
                 position: absolute;
                 top: 10%;
                 left: 35%;
-                width: 40%;
+                width: 300px;
+                animation: phoneFadeIn 1.3s ease-in-out;
             }
         }
     }
 }
-
-
 
