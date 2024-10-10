@@ -66,6 +66,18 @@
 
                 h2 {
                     font-size: 3em;
+
+                    span:first-child {
+                        animation: titleFadeInTablet 1s ease-in-out forwards;
+                        transform: translateX(0%);
+                    }
+
+                    span:last-child {
+                        animation: titleFadeInTablet 1s ease-in-out forwards;
+                        animation-delay: .2s;
+                        transform: translateX(0%);
+
+                    }
                 }
 
                 p {

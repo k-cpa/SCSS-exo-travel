@@ -125,6 +125,30 @@ header .burger_wrapper .fa-bars {
     transform: translateX(0%);
   }
 }
+@keyframes titleFadeIn {
+  0% {
+    transform: translateY(100%);
+    color: coral;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0%);
+    color: white;
+    visibility: visible;
+  }
+}
+@keyframes titleFadeInTablet {
+  0% {
+    transform: translateX(-100%);
+    color: coral;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0%);
+    color: white;
+    visibility: visible;
+  }
+}
 #learn_more {
   display: flex;
   flex-direction: row;
@@ -156,6 +180,18 @@ header .burger_wrapper .fa-bars {
   font-size: 3.5em;
   color: white;
   font-weight: 550;
+}
+#learn_more .learn_card .learn_elements h2 span:first-child {
+  display: inline-block;
+  animation: titleFadeIn 1s ease-in-out forwards;
+  transform: translateY(100%);
+}
+#learn_more .learn_card .learn_elements h2 span:last-child {
+  display: inline-block;
+  visibility: hidden;
+  animation: titleFadeIn 1s ease-in-out forwards;
+  animation-delay: 0.3s;
+  transform: translateY(100%);
 }
 #learn_more .learn_card .learn_elements p {
   font-size: 1.2em;
@@ -453,6 +489,15 @@ footer .elements_wrapper #bottom_footer p {
   }
   #learn_more .learn_card .learn_elements h2 {
     font-size: 3em;
+  }
+  #learn_more .learn_card .learn_elements h2 span:first-child {
+    animation: titleFadeInTablet 1s ease-in-out forwards;
+    transform: translateX(0%);
+  }
+  #learn_more .learn_card .learn_elements h2 span:last-child {
+    animation: titleFadeInTablet 1s ease-in-out forwards;
+    animation-delay: 0.2s;
+    transform: translateX(0%);
   }
   #learn_more .learn_card .learn_elements p {
     font-size: 1em;

@@ -24,6 +24,22 @@
 
             h2 {
                 @include mixin.h2 (white);
+
+                span:first-child {
+                    display: inline-block;
+                    animation: titleFadeIn 1s ease-in-out forwards;
+                    // animation-delay: 1s;
+                    transform: translateY(100%);
+                  }
+              
+                  span:last-child {
+                    display: inline-block;
+                    visibility: hidden;
+                    animation: titleFadeIn 1s ease-in-out forwards;
+                    animation-delay: .3s;
+                    transform: translateY(100%);
+                    
+                  }
             }
 
             p {
@@ -32,7 +48,7 @@
             }
 
         }
-
+      
         // Gestion partie image
         .img_wrapper {
             @include mixin.flex;

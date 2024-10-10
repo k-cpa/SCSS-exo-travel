@@ -19,3 +19,29 @@
     transform: translateX(0%);
   }
 }
+
+@keyframes titleFadeIn {
+  0% {
+    transform: translateY(100%);
+    color: coral;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0%);
+    color: white;
+    visibility: visible;
+  }
+}
+
+@keyframes titleFadeInTablet {
+  0% {
+    transform: translateX(-100%);
+    color: coral;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0%);
+    color: white;
+    visibility: visible;
+  }
+}
