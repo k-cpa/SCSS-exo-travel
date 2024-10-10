@@ -157,6 +157,7 @@
                 @include mixin.flex (column);
                 padding-top: 4em;
                 gap: 2em;
+                text-align: center;
 
                 .socials_container {
                     ul {
