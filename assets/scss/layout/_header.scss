@@ -43,10 +43,10 @@ header {
     }
 
     .burger_wrapper  {
-        @include mixin.flex;
+        @include mixin.flex($align: flex-start);
 
         i {
-            display: hidden;
+            display: none;
             color: black;
             border: 1px solid grey;
             padding: 5px 10px;
