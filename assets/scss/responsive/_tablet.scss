@@ -7,11 +7,25 @@
     .container, .touch {
         max-width: 1520px;
     }
+
+    #footer {
+
+        img {
+            width: 40%;
+        }
+    }
 }
 
 @media screen and (max-width:1520px) {
     .container, .touch {
         max-width: 1320px;
+    }
+
+    #footer {
+
+        img {
+            width: 45%;
+        }
     }
 
 }
