@@ -201,7 +201,7 @@ header .burger_wrapper .fa-bars {
   display: inline-block;
   visibility: hidden;
   animation: titleFadeIn 1s ease-in-out forwards;
-  animation-delay: 0.3s;
+  animation-delay: 0.1s;
   transform: translateY(100%);
 }
 #learn_more .learn_card .learn_elements p {
