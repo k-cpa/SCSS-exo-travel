@@ -25,6 +25,7 @@ footer {
         color: var.$colorTextInside;
         font-size: 30px;
         padding-right: 15px;
+        transition: .3s ease;
 
         &:hover {
             color: coral;
@@ -83,6 +84,7 @@ footer {
                 color: rgb(188, 188, 188);
                 padding-top: 1%;
             }
+
         }
 
     }

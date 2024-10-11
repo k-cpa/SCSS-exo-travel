@@ -8,7 +8,7 @@
 
     .learn_card {
         @include mixin.flex;
-        width: 85%;
+        // max-width: 1650px;
         height: 100%;
         background-color: var.$primaryColor;
         overflow: hidden;
@@ -61,7 +61,7 @@
                 position: absolute;
                 top: 10%;
                 left: 35%;
-                width: 300px;
+                width: 18rem;
                 animation: phoneFadeIn 1s ease-in-out;
             }
         }

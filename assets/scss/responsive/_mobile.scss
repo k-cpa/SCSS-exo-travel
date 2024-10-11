@@ -1,21 +1,35 @@
 @use "../abstract/variable.scss" as var;
 @use "../abstract/mixin.scss";
 
-@media screen and (max-width: 450px) {
+
+@media screen and (max-width: 720px) {
+
+    body {
+
+        .btn {
+            padding: 10px 20px;
+        }
+    }
+
+    .container, .touch {
+        max-width: 670px;
+    }
 
 
         /////////////////////////// HEADER
 
         header {
             @include mixin.flex (column);
-            height: 10vh;
+            height: 8rem;
 
             img {
                 width: 300px;
+                padding-top: .5rem;
             }
 
             nav {
                 @include mixin.flex ($justify: center);
+                padding-top: .5rem;
             }
 
             .burger_wrapper {
@@ -32,6 +46,7 @@
         .learn_card {
             .learn_elements {
                 width: 100%;
+                height: 80%;
             }
 
             .img_wrapper {
@@ -43,7 +58,8 @@
         /////////////////////////// SERVICES
 
     #services {
-        height: 110vh;
+        height: 80rem;
+        text-align: center;
 
         .services_title {
             align-self: center;
@@ -63,7 +79,7 @@
     /////////////////////////// FEATURES
         
     #features {
-        height: 110vh;
+        height: 90rem;
         margin-top: 2em;
         @include mixin.flex (column, flex-start, flex-start);
 
@@ -71,6 +87,7 @@
             align-self: center;
             padding-right: 0%;
             margin-bottom: 2em;
+            text-align: center;
         }
 
         .features_container {
@@ -89,7 +106,7 @@
 
         .touch {
             width: 100%;
-            height: 40vh;
+            height: 30rem;
             @include mixin.flex (column);
             gap: 2em;
 
@@ -118,7 +135,7 @@
     
     footer {
         @include mixin.flex(column);
-        height: 75vh;
+        height: 70rem;
 
         img {
             width: 100%;
@@ -126,8 +143,7 @@
         }
 
         .elements_wrapper {
-            padding-top: 20vh;
-
+            padding-top: 10rem;
             ul {
                 @include mixin.flex (column);
             }
@@ -156,6 +172,7 @@
             #bottom_footer {
                 @include mixin.flex (column);
                 padding-top: 4em;
+                // padding-bottom: 4rem;
                 gap: 2em;
                 text-align: center;
 
@@ -168,4 +185,97 @@
 
         }
     }
+}
+
+
+@media screen and (max-width: 670px) {
+
+    .container, .touch {
+        max-width: 620px;
+    }
+
+    #learn_more {
+
+        .learn_card {
+
+            .learn_elements {
+                gap: 1em;
+            }
+        }     
+    }  
+}
+
+@media screen and (max-width: 620px) {
+
+    .container, .touch {
+        max-width: 570px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+
+    .container, .touch {
+        max-width: 520px;
+    }
+
+    #features {
+        height: 95rem;
+    }
+
+    footer {
+        height: 60rem;
+    }
+}
+
+@media screen and (max-width: 520px) {
+
+    .container, .touch {
+        max-width: 470px;
+    }
+
+    #features {
+        height: 100rem;
+    }
+
+    footer {
+        height: 55rem;
+    }
+
+
+}
+
+@media screen and (max-width: 470px) {
+
+    .container, .touch {
+        max-width: 420px;
+    }
+
+    footer {
+        height: 50rem;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+
+    .container, .touch {
+        max-width: 370px;
+    }
+
+    #features {
+        height: 105rem;
+    }
+
+}
+
+@media screen and (max-width: 370px) {
+
+    .container, .touch {
+        max-width: 340px;
+    }
+
+    #features {
+        height: 110rem;
+    }
+
 }
