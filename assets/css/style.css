@@ -86,6 +86,7 @@ header nav {
   align-items: center;
   width: 100%;
   height: 50%;
+  z-index: 2;
 }
 header nav ul {
   display: flex;
@@ -189,6 +190,7 @@ header .burger_wrapper .fa-bars {
   font-size: 3.5em;
   color: white;
   font-weight: 550;
+  overflow: hidden;
 }
 #learn_more .learn_card .learn_elements h2 span:first-child {
   display: inline-block;
@@ -268,12 +270,16 @@ header .burger_wrapper .fa-bars {
   border-radius: 20px;
   z-index: 1;
 }
-#services .services_cards_container .service_cards:hover {
-  transform: scale(1.1);
+#services .services_cards_container .service_cards .card_hover {
+  transition: 0.3s ease;
   z-index: 2;
   cursor: pointer;
+  color: white;
 }
-#services .services_cards_container .service_cards h3, #services .services_cards_container .service_cards a {
+#services .services_cards_container .service_cards .card_hover:hover {
+  transform: scale(1.1);
+}
+#services .services_cards_container .service_cards a {
   z-index: 2;
   color: white;
 }
@@ -517,17 +523,15 @@ footer .elements_wrapper #bottom_footer p {
   }
 }
 @media screen and (max-width: 920px) {
-  header nav {
-    position: relative;
-  }
   header nav ul {
     display: none;
+    position: absolute;
+    top: 100%;
+    right: 20%;
   }
   header .burger_wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
     padding-right: 5%;
+    position: relative;
   }
   header .burger_wrapper .fa-bars {
     display: revert;
@@ -540,7 +544,7 @@ footer .elements_wrapper #bottom_footer p {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    background-color: rgba(255, 127, 80, 0.5);
+    background-color: rgb(223, 191, 179);
     padding: 1rem;
     margin: 0.3rem;
     border-radius: 20px;
@@ -630,11 +634,6 @@ footer .elements_wrapper #bottom_footer p {
     justify-content: center;
     align-items: center;
     padding-top: 0.5rem;
-  }
-  header .burger_wrapper {
-    position: static;
-    top: auto;
-    left: auto;
   }
   #learn_more {
     margin-top: 2em;

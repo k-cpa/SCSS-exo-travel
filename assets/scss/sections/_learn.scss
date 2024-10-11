@@ -24,6 +24,7 @@
 
             h2 {
                 @include mixin.h2 (white);
+                overflow: hidden;
 
                 span:first-child {
                     display: inline-block;

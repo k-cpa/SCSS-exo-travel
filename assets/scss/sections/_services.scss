@@ -36,17 +36,25 @@
                 background-color: rgba(0, 0, 0, 0.5);
                 border-radius: var.$radiusDefault;
                 z-index: 1;
+
+
             }
 
-            &:hover {
-                transform: scale(1.1);
+            .card_hover {
+                transition: .3s ease;
                 z-index: 2;
                 cursor: pointer;
-            }
+                color: white;
 
-            h3, a {
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+            } 
+             a {
                 z-index: 2;
                 color: white;
+
             }
 
         }
